@@ -1,10 +1,12 @@
 [ITEM]
-[SECTION] education
-[NAME] Heart Of England School
-[LOGO] https://tse3.mm.bing.net/th/id/OIP.GjeHdMiH8C9VLrsDLOCa-AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3
-[ROUGHDATE] 2021 - 2026
-[EXACTDATES] September 2021 - June 2026
-[DESC] At Heart Of England School I Sat 10 GCSE's:
+[SECTION]education[/SECTION]
+[NAME]Heart Of England School (Y7-Y11)[/NAME]
+[COLOUR] #005F71 [/COLOUR]
+[LOGO]https://tse3.mm.bing.net/th/id/OIP.GjeHdMiH8C9VLrsDLOCa-AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
+[ROUGHDATE]2021 - 2026[/ROUGHDATE]
+[EXACTDATES]September 2021 - June 2026[/EXACTDATES]
+[DESC]
+At Heart Of England School I Sat 10 GCSE's:
 - English Literature ()
 - English Language ()
 - Mathmatics ()
@@ -15,15 +17,31 @@
 - Religious Studies ()
 - Geography ()
 
-I also was apart of the student council and prefects where i helped create a enjoyable school enviroment and help out with school activities. I also took part in 5school productions during my time at HofE.[/DESC]
+I also was apart of the student council and prefects where i helped create a enjoyable school enviroment and help out with school activities. I also took part in 5school productions during my time at HofE.
+[/DESC]
+[/ITEM]
 
 [ITEM]
-[SECTION] experience
-[NAME] University Of Nottingham (Engineering Faculty)
-[LOGO] https://spaceanddefense.io/wp-content/uploads/2019/08/University_of_Nottingham_logo835x396.png
-[ROUGHDATE] May 2025
-[EXACTDATES] 12th - 15th May 2025
-[DESC] During my time at nottingham univeristy, i moved throughout the Engineering Faculty and explored many different aspects of enginnering. These were
+[SECTION]education[/SECTION]
+[NAME] WMG / HofE Placeholder (Y12-Y13)[/NAME]
+[COLOUR] #005F71 [/COLOUR]
+[LOGO]https://tse3.mm.bing.net/th/id/OIP.GjeHdMiH8C9VLrsDLOCa-AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
+[ROUGHDATE]2026 - 2028[/ROUGHDATE]
+[EXACTDATES]September 2026 - June 2028[/EXACTDATES]
+[DESC]
+...
+[/DESC]
+[/ITEM]
+
+[ITEM]
+[SECTION]experience[/SECTION]
+[COLOUR] #015480 [/COLOUR]
+[NAME]University Of Nottingham (Engineering Faculty)[/NAME]
+[LOGO]https://spaceanddefense.io/wp-content/uploads/2019/08/University_of_Nottingham_logo835x396.png[/LOGO]
+[ROUGHDATE]May 2025[/ROUGHDATE]
+[EXACTDATES]12th - 15th May 2025[/EXACTDATES]
+[DESC]
+During my time at nottingham univeristy, i moved throughout the Engineering Faculty and explored many different aspects of enginnering. These were
 - Biofuels
 - Chemical Engineering
 - Electircal And Electronic Enginnering (EEE)
@@ -31,39 +49,80 @@ I also was apart of the student council and prefects where i helped create a enj
 - Computer Numerical Control (CNC)
 - Mass, Physics And Movement
 
-Across this week i learnt many new skills from testing parts and assembling circuits to 3D modeling, designing and machine handeling.[/DESC]
-[IMAGES] not1.jpeg, not2.jpeg, not3.jpeg, not4.jpeg, not5.jpeg, not6.jpeg, not7.jpeg, not8.jpeg [/IMAGES]
+Across this week i learnt many new skills from testing parts and assembling circuits to 3D modeling, designing and machine handeling.
+[/DESC]
+[IMAGES]not1.jpeg, not2.jpeg, not3.jpeg, not4.jpeg, not5.jpeg, not6.jpeg, not7.jpeg, not8.jpeg[/IMAGES]
+[/ITEM]
 
 [ITEM]
-[SECTION] experience
-[NAME] Southco
-[LOGO] https://hwchamber.co.uk/wp-content/uploads/2020/01/Southco.png
-[ROUGHDATE] September 2025
-[EXACTDATES] Exact Dates TBC - September 2025
-[DESC] During the summer holidays of 2025, i did a 2day work expereince program with Southco Manufacturing in Worcester. During my time at Southco i learnt how to use multiple different modeling softwares such as NX Design (Siemens) and Solidworks. I practiced recreating parts and also designed my own parts. 
-I designed a 1:4scale F1 tyre and stand for it which was printed on a resin printer overnight. I also got a tour around the Worcester Factory where i saw many examples of production lines and manufacturing techniques such as Injection Moulding.[/DESC]
-[IMAGES] s1.jpeg, s2.jpeg, s3.jpeg, s4.jpeg, s5.jpeg, s6.jpeg, s7.jpeg [/IMAGES]
+[SECTION]experience[/SECTION]
+[NAME]Southco[/NAME]
+[COLOUR] #485865 [/COLOUR]
+[LOGO]https://hwchamber.co.uk/wp-content/uploads/2020/01/Southco.png[/LOGO]
+[ROUGHDATE]September 2025[/ROUGHDATE]
+[EXACTDATES]Exact Dates TBC - September 2025[/EXACTDATES]
+[DESC]
+During the summer holidays of 2025, i did a 2day work expereince program with Southco Manufacturing in Worcester. During my time at Southco i learnt how to use multiple different modeling softwares such as NX Design (Siemens) and Solidworks. I practiced recreating parts and also designed my own parts. 
+I designed a 1:4scale F1 tyre and stand for it which was printed on a resin printer overnight. I also got a tour around the Worcester Factory where i saw many examples of production lines and manufacturing techniques such as Injection Moulding.
+[/DESC]
+[IMAGES]s1.jpeg, s2.jpeg, s3.jpeg, s4.jpeg, s5.jpeg, s6.jpeg, s7.jpeg, s8.jpeg, s9.jpeg, s0.jpeg[/IMAGES]
+[/ITEM]
 
 [ITEM]
-[SECTION] achievements
-[NAME] Bronze DofE
-[LOGO] https://opendofe.org/images/template-content/square_level_logo_-_BRONZE.jpg
-[ROUGHDATE] June 2024 - January 2025
-[EXACTDATES] N/A
-[DESC] I have completed my bronze DofE with my scout group in 2024/5. During DofE i learnt many new skills for teamwork and perseverance.
-- For my Physical i did 6months of Climbing
-- For my Skill i did a photography course
-- For my Volunteering i volountered with Beavers
-- My Expedition was done on the 19th-20th August in wet conditions[/DESC]
+[SECTION]experience[/SECTION]
+[NAME]Aston Martin[/NAME]
+[COLOUR] #1F7652 [/COLOUR]
+[LOGO]https://tse3.mm.bing.net/th/id/OIP.oIO6fi_SPw9ko1UeKAqrzgHaDt?r=0&rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
+[ROUGHDATE]September 2026[/ROUGHDATE]
+[EXACTDATES]24th - 28th September 2026[/EXACTDATES]
+[DESC]
+Aston Martin Placeholder
+[/DESC]
+[IMAGES][/IMAGES]
+[/ITEM]
 
 [ITEM]
-[SECTION] achievements
-[NAME] Silver DofE
-[LOGO] https://tse4.mm.bing.net/th/id/OIP.wJBaBhcV7BB0VNIkl4J_qwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3
-[ROUGHDATE] January 2026 - September 2026
-[EXACTDATES] N/A
-[DESC] I have completed my silver DofE with my scout group in 2026. During DofE we had to handle bad terrain and weather conditions which taught us new resiliance and enduarance skills.
-- For my Physical i did 6months of Running
-- For my Skill i did a website design course (this website)
-- For my Volunteering i volountered with Scouts and have since continued being a young leader with them
-- My Expedition was done on the 3rd-5th April in a storm[/DESC]
+[SECTION]achievements[/SECTION]
+[NAME]Bronze DofE[/NAME]
+[COLOUR] #A95139 [/COLOUR]
+[LOGO]https://opendofe.org/images/template-content/square_level_logo_-_BRONZE.jpg[/LOGO]
+[ROUGHDATE]June 2024 - January 2025[/ROUGHDATE]
+[EXACTDATES]N/A[/EXACTDATES]
+[DESC]
+I have completed my bronze DofE with my scout group in 2024/5. During DofE i learnt many new skills for teamwork and perseverance.
+ - For my Physical i did 6months of Climbing
+ - For my Skill i did a photography course
+ - For my Volunteering i volountered with Beavers
+ - My Expedition was done on the 19th-20th August in wet conditions
+[/DESC]
+[/ITEM]
+
+[ITEM]
+[SECTION]achievements[/SECTION]
+[NAME]Silver DofE[/NAME]
+[COLOUR] #B4B2B0 [/COLOUR]
+[LOGO]https://tse4.mm.bing.net/th/id/OIP.wJBaBhcV7BB0VNIkl4J_qwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
+[ROUGHDATE]January 2026 - September 2026[/ROUGHDATE]
+[EXACTDATES]N/A[/EXACTDATES]
+[DESC]
+I have completed my silver DofE with my scout group in 2026. During DofE we had to handle bad terrain and weather conditions which taught us new resiliance and enduarance skills.
+ - For my Physical i did 6months of Running
+ - For my Skill i did a website design course (this website)
+ - For my Volunteering i volountered with Scouts and have since continued being a young leader with them
+ - My Expedition was done on the 3rd-5th April in a storm
+[/DESC]
+[/ITEM]
+
+[ITEM]
+[SECTION]References[/SECTION]
+[NAME]Stewart Beck[/NAME]
+[CONNECTION]Scout Leader - 2nd Balsall Common Scouts[/CONNECTION]
+[CONTACT]stewartbeck3977@hotmail.co.uk[/CONTACT]
+[/ITEM]
+
+[ITEM]
+[SECTION]References[/SECTION]
+[NAME]Samuel Cozens[/NAME]
+[CONNECTION]Teacher & Tutor (Y7-10) - Heart Of England School[/CONNECTION]
+[CONTACT]cozenss@heart-england.co.uk[/CONTACT]
+[/ITEM]
