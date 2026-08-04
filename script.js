@@ -73,7 +73,7 @@ function createAccordionHTML(item) {
     const accentColor = item.colour && item.colour.trim() !== '' ? item.colour : '#cbd5e1';
 
     return `
-        <div class="accordion-item" style="border-color: ${accentColor};">
+        <div class="accordion-item" style="border-color: ${accentColor}; width: 100%; margin-bottom: 12px;">
             <button class="accordion-header" onclick="toggleAccordion(this)">
                 <div class="header-left">
                     ${logoHTML}
@@ -230,10 +230,12 @@ function loadSectionContent(targetSections) {
                     } else if (section.includes('quote') || section.includes('testimonial')) {
                         const el = document.getElementById('quotes-container');
                         if (el) el.innerHTML += createQuoteCardHTML(itemData);
-                    } else if (section.includes('reference') && itemData.referencesList) {
-                        const el = document.getElementById('references-footer-container');
-                        if (el) {
-                            el.innerHTML = `<p>Please contact me for full references from: <strong>${itemData.referencesList}</strong></p>`;
+                    } else if (section.includes('reference')) {
+                        if (itemData.referencesList) {
+                            const el = document.getElementById('references-footer-container');
+                            if (el) {
+                                el.innerHTML = `<p>Please contact me for full references for: <strong>${itemData.referencesList}</strong></p>`;
+                            }
                         }
                     }
                 });
