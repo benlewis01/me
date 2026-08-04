@@ -109,19 +109,6 @@ function createQuoteCardHTML(item) {
     `;
 }
 
-function createReferenceHTML(item) {
-    if (!item.name || item.name.trim() === '') return '';
-    return `
-        <div class="reference-card">
-            <h3>${item.name}</h3>
-            <p class="ref-position">${item.connection || ''}</p>
-            <div class="ref-contact">
-                <span>${item.contact || ''}</span>
-            </div>
-        </div>
-    `;
-}
-
 /* ==========================================================================
    4. LIGHTBOX CONTROLS
    ========================================================================== */
@@ -181,18 +168,18 @@ function parseInfoTxt(text) {
             connection: '',
             contact: '',
             colour: '',
-            quote: ''
+            quote: '',
+            referencesList: ''
         };
 
         const descMatch = block.match(/\[\s*DESC\s*\]([\s\S]*?)(?:\[\/\s*DESC\s*\]|\[\s*DESC\s*\]|$)/i);
-        if (descMatch) {
-            item.description = descMatch[1].trim();
-        }
+        if (descMatch) item.description = descMatch[1].trim();
 
         const quoteMatch = block.match(/\[\s*QUOTE\s*\]([\s\S]*?)(?:\[\/\s*QUOTE\s*\]|\[\s*QUOTE\s*\]|$)/i);
-        if (quoteMatch) {
-            item.quote = quoteMatch[1].trim();
-        }
+        if (quoteMatch) item.quote = quoteMatch[1].trim();
+
+        const refListMatch = block.match(/\[\s*REFERENCES\s*\]([\s\S]*?)(?:\[\/\s*REFERENCES\s*\]|\[\s*REFERENCES\s*\]|$)/i);
+        if (refListMatch) item.referencesList = refListMatch[1].trim();
 
         const lines = block.split(/\r?\n/);
         lines.forEach(line => {
@@ -208,7 +195,7 @@ function parseInfoTxt(text) {
             if (trimmed.startsWith('[COLOUR]')) item.colour = trimmed.replace(/\[\/?COLOUR\]/gi, '').trim();
         });
 
-        if (item.name || item.section) {
+        if (item.name || item.section || item.referencesList) {
             items.push(item);
         }
     });
@@ -240,12 +227,14 @@ function loadSectionContent(targetSections) {
                     } else if (section.includes('achievement')) {
                         const el = document.getElementById('achievements-container');
                         if (el) el.innerHTML += createAccordionHTML(itemData);
-                    } else if (section.includes('quote')) {
+                    } else if (section.includes('quote') || section.includes('testimonial')) {
                         const el = document.getElementById('quotes-container');
                         if (el) el.innerHTML += createQuoteCardHTML(itemData);
-                    } else if (section.includes('reference')) {
-                        const el = document.getElementById('references-container');
-                        if (el) el.innerHTML += createReferenceHTML(itemData);
+                    } else if (section.includes('reference') && itemData.referencesList) {
+                        const el = document.getElementById('references-footer-container');
+                        if (el) {
+                            el.innerHTML = `<p>Please contact me for full references for: <strong>${itemData.referencesList}</strong></p>`;
+                        }
                     }
                 });
             })
