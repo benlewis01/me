@@ -95,24 +95,15 @@ function createAccordionHTML(item) {
     `;
 }
 
-function createQuoteHTML(item) {
+function createQuoteCardHTML(item) {
     if (!item.name || item.name.trim() === '') return '';
     const quoteText = item.quote || item.description || '';
     return `
-        <div class="accordion-item" style="border-color: #cbd5e1; margin-bottom: 16px;">
-            <button class="accordion-header" onclick="toggleAccordion(this)">
-                <div class="header-left">
-                    <span class="item-name">${item.name}</span>
-                </div>
-                <div class="header-right">
-                    <span class="item-rough-date">${item.connection || ''}</span>
-                </div>
-                <div class="icon-container">+</div>
-            </button>
-            <div class="accordion-content">
-                <div class="content-inner">
-                    <p class="item-description">"${quoteText}"</p>
-                </div>
+        <div class="reference-card">
+            <h3>${item.name}</h3>
+            <p class="ref-position">${item.connection || ''}</p>
+            <div class="ref-contact">
+                <span>"${quoteText}"</span>
             </div>
         </div>
     `;
@@ -251,7 +242,7 @@ function loadSectionContent(targetSections) {
                         if (el) el.innerHTML += createAccordionHTML(itemData);
                     } else if (section.includes('quote')) {
                         const el = document.getElementById('quotes-container');
-                        if (el) el.innerHTML += createQuoteHTML(itemData);
+                        if (el) el.innerHTML += createQuoteCardHTML(itemData);
                     } else if (section.includes('reference')) {
                         const el = document.getElementById('references-container');
                         if (el) el.innerHTML += createReferenceHTML(itemData);
