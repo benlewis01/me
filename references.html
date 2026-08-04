@@ -30,15 +30,20 @@
     </header>
 
     <div class="main-wrapper">
+        <section class="accordion-section" style="margin-bottom: 40px;">
+            <h2>Quotes & Testimonies</h2>
+            <div id="quotes-container"></div>
+        </section>
+
         <section class="grid-section">
-            <h2>Testimonies & References</h2>
+            <h2>References</h2>
             <div id="references-container" class="references-grid"></div>
         </section>
     </div>
 
     <script src="script.js"></script>
     <script>
-        loadSectionContent(['reference']);
+        loadSectionContent(['quotes', 'reference']);
     </script>
 </body>
 </html>
