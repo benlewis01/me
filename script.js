@@ -233,7 +233,7 @@ function loadSectionContent(targetSections) {
                     } else if (section.includes('reference') && itemData.referencesList) {
                         const el = document.getElementById('references-footer-container');
                         if (el) {
-                            el.innerHTML = `<p>Please contact me for full references for: <strong>${itemData.referencesList}</strong></p>`;
+                            el.innerHTML = `<p>Please contact me for full references from: <strong>${itemData.referencesList}</strong></p>`;
                         }
                     }
                 });
