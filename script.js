@@ -166,7 +166,8 @@ function parseInfoTxt(text) {
             description: '',
             connection: '',
             contact: '',
-            colour: ''
+            colour: '',
+            quote: ' '
         };
 
         // Extract [DESC]...[/DESC] multi-line block safely
