@@ -23,23 +23,15 @@ I also was apart of the student council and prefects where i helped create a enj
 
 [ITEM]
 [SECTION]experience[/SECTION]
-[COLOUR] #015480 [/COLOUR]
-[NAME]University Of Nottingham (Engineering Faculty)[/NAME]
-[LOGO]https://spaceanddefense.io/wp-content/uploads/2019/08/University_of_Nottingham_logo835x396.png[/LOGO]
-[ROUGHDATE]May 2025[/ROUGHDATE]
-[EXACTDATES]12th - 15th May 2025[/EXACTDATES]
+[NAME]Aston Martin[/NAME]
+[COLOUR] #1F7652 [/COLOUR]
+[LOGO]https://tse3.mm.bing.net/th/id/OIP.oIO6fi_SPw9ko1UeKAqrzgHaDt?r=0&rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
+[ROUGHDATE]August 2026[/ROUGHDATE]
+[EXACTDATES]24th - 28th August 2026[/EXACTDATES]
 [DESC]
-During my time at nottingham univeristy, i moved throughout the Engineering Faculty and explored many different aspects of enginnering. These were
-- Biofuels
-- Chemical Engineering
-- Electircal And Electronic Enginnering (EEE)
-- Rapid Prototyping (3D Printing)
-- Computer Numerical Control (CNC)
-- Mass, Physics And Movement
-
-Across this week i learnt many new skills from testing parts and assembling circuits to 3D modeling, designing and machine handeling.
+Aston Martin Placeholder
 [/DESC]
-[IMAGES]not1.jpeg, not2.jpeg, not3.jpeg, not4.jpeg, not5.jpeg, not6.jpeg, not7.jpeg, not8.jpeg[/IMAGES]
+[IMAGES][/IMAGES]
 [/ITEM]
 
 [ITEM]
@@ -58,15 +50,23 @@ I designed a 1:4scale F1 tyre and stand for it which was printed on a resin prin
 
 [ITEM]
 [SECTION]experience[/SECTION]
-[NAME]Aston Martin[/NAME]
-[COLOUR] #1F7652 [/COLOUR]
-[LOGO]https://tse3.mm.bing.net/th/id/OIP.oIO6fi_SPw9ko1UeKAqrzgHaDt?r=0&rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
-[ROUGHDATE]August 2026[/ROUGHDATE]
-[EXACTDATES]24th - 28th August 2026[/EXACTDATES]
+[COLOUR] #015480 [/COLOUR]
+[NAME]University Of Nottingham (Engineering Faculty)[/NAME]
+[LOGO]https://spaceanddefense.io/wp-content/uploads/2019/08/University_of_Nottingham_logo835x396.png[/LOGO]
+[ROUGHDATE]May 2025[/ROUGHDATE]
+[EXACTDATES]12th - 15th May 2025[/EXACTDATES]
 [DESC]
-Aston Martin Placeholder
+During my time at nottingham univeristy, i moved throughout the Engineering Faculty and explored many different aspects of enginnering. These were
+- Biofuels
+- Chemical Engineering
+- Electircal And Electronic Enginnering (EEE)
+- Rapid Prototyping (3D Printing)
+- Computer Numerical Control (CNC)
+- Mass, Physics And Movement
+
+Across this week i learnt many new skills from testing parts and assembling circuits to 3D modeling, designing and machine handeling.
 [/DESC]
-[IMAGES][/IMAGES]
+[IMAGES]not1.jpeg, not2.jpeg, not3.jpeg, not4.jpeg, not5.jpeg, not6.jpeg, not7.jpeg, not8.jpeg[/IMAGES]
 [/ITEM]
 
 [ITEM]
