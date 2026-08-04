@@ -1,7 +1,13 @@
+/* ==========================================================================
+   1. GLOBAL VARIABLES & LIGHTBOX STATE
+   ========================================================================== */
 let currentGalleryImages = [];
 let currentImageIndex = 0;
 let lightboxActive = false; 
 
+/* ==========================================================================
+   2. ACCORDION EXPANSION & AUTO-SCROLL
+   ========================================================================== */
 function toggleAccordion(headerElement) {
     const currentItem = headerElement.parentElement;
     const container = currentItem.parentElement; 
@@ -11,6 +17,7 @@ function toggleAccordion(headerElement) {
 
     const isOpening = !currentItem.classList.contains('active');
 
+    // Close open accordion items within the same container
     const activeItem = container.querySelector('.accordion-item.active');
     if (activeItem && activeItem !== currentItem) {
         activeItem.classList.remove('active');
@@ -24,6 +31,7 @@ function toggleAccordion(headerElement) {
         currentItem.classList.add('active');
         content.style.maxHeight = content.scrollHeight + "px";
 
+        // Smooth scroll positioning below fixed header
         setTimeout(() => {
             const stickyHeader = document.querySelector('.sticky-header');
             const headerBottomOffset = stickyHeader ? stickyHeader.getBoundingClientRect().height : 110;
@@ -39,6 +47,9 @@ function toggleAccordion(headerElement) {
     }
 }
 
+/* ==========================================================================
+   3. DYNAMIC HTML BUILDERS
+   ========================================================================== */
 function createAccordionHTML(item) {
     if (!item.name || item.name.trim() === '') return '';
 
@@ -99,7 +110,9 @@ function createReferenceHTML(item) {
     `;
 }
 
-/* LIGHTBOX CONTROLS */
+/* ==========================================================================
+   4. LIGHTBOX CONTROLS & KEYBOARD LISTENERS
+   ========================================================================== */
 function openLightbox(index, imgArray) {
     currentGalleryImages = imgArray;
     currentImageIndex = index;
@@ -130,55 +143,62 @@ function changeLightboxImage(direction) {
 
 document.addEventListener('keydown', function(e) {
     if (!lightboxActive) return;
-    if (e.key === 'ArrowRight') changeLightboxImage(1);
-    else if (e.key === 'ArrowLeft') changeLightboxImage(-1);
-    else if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight' || e.key === 'Right') changeLightboxImage(1);
+    else if (e.key === 'ArrowLeft' || e.key === 'Left') changeLightboxImage(-1);
+    else if (e.key === 'Escape' || e.key === 'Esc') closeLightbox();
 });
 
-/* PARSER */
+/* ==========================================================================
+   5. DATA PARSER & CONTENT LOADER
+   ========================================================================== */
 function loadSectionContent(targetSections) {
-    fetch('info.txt?t=' + new Date().getTime())
-        .then(res => res.text())
-        .then(text => {
-            const rawItems = text.split(/\[\/?ITEM\]/i);
-            rawItems.forEach(rawItem => {
-                if (!rawItem.trim()) return;
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch('info.txt?t=' + new Date().getTime())
+            .then(res => {
+                if (!res.ok) throw new Error("Could not load info.txt");
+                return res.text();
+            })
+            .then(text => {
+                const rawItems = text.split(/\[\/?ITEM\]/i);
+                rawItems.forEach(rawItem => {
+                    if (!rawItem.trim()) return;
 
-                const getTag = (t) => {
-                    const match = rawItem.match(new RegExp('\\[\\s*' + t + '\\s*\\]([\\s\\S]*?)\\[\\/\\s*' + t + '\\s*\\]', 'i'));
-                    return match ? match[1].trim() : '';
-                };
+                    const getTag = (tagName) => {
+                        const match = rawItem.match(new RegExp('\\[\\s*' + tagName + '\\s*\\]([\\s\\S]*?)\\[\\/\\s*' + tagName + '\\s*\\]', 'i'));
+                        return match ? match[1].trim() : '';
+                    };
 
-                const section = getTag('SECTION').toLowerCase();
-                const itemData = {
-                    name: getTag('NAME'),
-                    logo: getTag('LOGO'),
-                    roughDate: getTag('ROUGHDATE'),
-                    exactDates: getTag('EXACTDATES'),
-                    images: getTag('IMAGES'),
-                    description: getTag('DESC'),
-                    connection: getTag('CONNECTION'),
-                    contact: getTag('CONTACT'),
-                    colour: getTag('COLOUR')
-                };
+                    const section = getTag('SECTION').toLowerCase();
+                    const itemData = {
+                        name: getTag('NAME'),
+                        logo: getTag('LOGO'),
+                        roughDate: getTag('ROUGHDATE'),
+                        exactDates: getTag('EXACTDATES'),
+                        images: getTag('IMAGES'),
+                        description: getTag('DESC'),
+                        connection: getTag('CONNECTION'),
+                        contact: getTag('CONTACT'),
+                        colour: getTag('COLOUR')
+                    };
 
-                const matchesTarget = targetSections.some(target => section.includes(target));
-                if (!matchesTarget) return;
+                    const matchesTarget = targetSections.some(target => section.includes(target));
+                    if (!matchesTarget) return;
 
-                if (section.includes('education')) {
-                    const el = document.getElementById('education-container');
-                    if (el) el.innerHTML += createAccordionHTML(itemData);
-                } else if (section.includes('experience') || section.includes('work')) {
-                    const el = document.getElementById('experience-container');
-                    if (el) el.innerHTML += createAccordionHTML(itemData);
-                } else if (section.includes('achievement')) {
-                    const el = document.getElementById('achievements-container');
-                    if (el) el.innerHTML += createAccordionHTML(itemData);
-                } else if (section.includes('reference')) {
-                    const el = document.getElementById('references-container');
-                    if (el) el.innerHTML += createReferenceHTML(itemData);
-                }
-            });
-        })
-        .catch(err => console.error("Could not load info.txt:", err));
+                    if (section.includes('education')) {
+                        const el = document.getElementById('education-container');
+                        if (el) el.innerHTML += createAccordionHTML(itemData);
+                    } else if (section.includes('experience') || section.includes('work')) {
+                        const el = document.getElementById('experience-container');
+                        if (el) el.innerHTML += createAccordionHTML(itemData);
+                    } else if (section.includes('achievement')) {
+                        const el = document.getElementById('achievements-container');
+                        if (el) el.innerHTML += createAccordionHTML(itemData);
+                    } else if (section.includes('reference')) {
+                        const el = document.getElementById('references-container');
+                        if (el) el.innerHTML += createReferenceHTML(itemData);
+                    }
+                });
+            })
+            .catch(err => console.error("Error fetching content:", err));
+    });
 }
