@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Lewis - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="header-top-row">
+                <h1>Ben Lewis</h1>
+                <div class="contact-info">
+                    <span>Phone: 07572918292</span>
+                    <span class="divider">|</span>
+                    <span>Email: benjaminlewis2021@hotmail.com</span>
+                </div>
+            </div>
+            
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link active-page">Home</a>
+                <a href="about.html" class="nav-link">About Me</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="experience.html" class="nav-link">Work Experience</a>
+                <a href="references.html" class="nav-link">Testimonies & References</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <section class="grid-section">
+            <h2>Welcome</h2>
+            <div class="grid-container profile-card profile-layout">
+                <div class="grid-left-media">
+                    <img src="profile.jpg" alt="Ben Lewis Profile" class="profile-photo-placeholder" onerror="this.style.display='none'">
+                </div>
+                <div class="grid-right-text">
+                    <p>Welcome to my online portfolio. Use the menu above to explore details about my education, work experience, hobbies, and reference contacts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="accordion-section">
+            <h2>Achievements Highlight</h2>
+            <div id="achievements-container"></div>
+        </section>
+    </div>
+
+    <div id="lightbox-modal" class="lightbox">
+        <button class="lightbox-arrow prev" onclick="changeLightboxImage(-1)">&#10094;</button>
+        <div class="lightbox-content-wrapper">
+            <img id="lightbox-img" src="" alt="Enlarged view">
+        </div>
+        <button class="lightbox-arrow next" onclick="changeLightboxImage(1)">&#10095;</button>
+        <button class="lightbox-close-btn" onclick="closeLightbox()">Close (Esc)</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        loadSectionContent(['achievement']);
+    </script>
+</body>
+</html>
