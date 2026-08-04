@@ -51,7 +51,9 @@ function toggleAccordion(headerElement) {
 function createAccordionHTML(item) {
     if (!item.name || item.name.trim() === '') return '';
 
-    const formattedDescription = (item.description || "").replace(/\n/g, '<br>');
+    let formattedDescription = (item.description || "").replace(/\n/g, '<br>');
+    formattedDescription = formattedDescription.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
     const logoHTML = item.logo && item.logo.trim() !== '' 
         ? `<img src="${item.logo}" alt="Logo" class="item-logo" onerror="this.style.display='none'">` 
         : '';
