@@ -128,7 +128,7 @@ I have completed my silver DofE with my scout group in 2026. During DofE we had 
 [/ITEM]
 
 [ITEM]
-[SECTION]References[/SECTION]
+[SECTION]Quotes[/SECTION]
 [NAME]David ?[/NAME]
 [CONNECTION] ROLE / CONNECTION HERE [/CONNECTION]
 [CONTACT] "QUOTE CAN GO HERE" [/CONTACT]
