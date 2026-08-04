@@ -36,7 +36,7 @@
                     <img src="profile.jpg" alt="Ben Lewis Profile" class="profile-photo-placeholder" onerror="this.style.display='none'">
                 </div>
                 <div class="grid-right-text">
-                    <p>I am an enthusiastic and diligent person and always approach everything I do with maximum effort. I am in year 12 and throughout my time at school my teachers have said that I am curious and learn quickly. I’m happy being a leader and a team player; I love to work with, and help, others and have had lots of opportunities to do this through Scouts. A key example of this is being a young leader with our Scouts troop on a Wednesday Night.</p>
+                    <p>Welcome to my online portfolio! I am an enthusiastic and diligent person and always approach everything I do with maximum effort. I am in year 12 and throughout my time at school my teachers have said that I am curious and learn quickly. I’m happy being a leader and a team player; I love to work with, and help, others and have had lots of opportunities to do this through Scouts. A key example of this is being a young leader with our Scouts troop on a Wednesday Night.</p>
                 </div>
             </div>
         </section>
@@ -71,58 +71,15 @@
             <div style="width: 100%;">
                 <h3 style="font-size: 1.15rem; color: #11161a; margin-bottom: 12px; border-bottom: 1px solid #cbd5e1; padding-bottom: 6px;">Duke of Edinburgh Awards</h3>
                 
-                <div class="accordion-item" style="border-color: #cd7f32; margin-bottom: 12px; width: 100%;">
-                    <button class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="header-left">
-                            <img src="https://opendofe.org/images/template-content/square_level_logo_-_BRONZE.jpg" alt="Bronze DofE Logo" class="item-logo" onerror="this.style.display='none'">
-                            <span class="item-name">Bronze DofE Award</span>
-                        </div>
-                        <div class="header-right">
-                            <span class="item-rough-date">June 2024 - January 2025</span>
-                        </div>
-                        <div class="icon-container">+</div>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="content-inner">
-                            <p class="item-description">
-                                I have completed my bronze DofE with my scout group in 2024/5. During DofE i learnt many new skills for teamwork and perseverance.<br><br>
-                                - <strong>Physical:</strong> 6 months of Climbing<br>
-                                - <strong>Skill:</strong> Photography course<br>
-                                - <strong>Volunteering:</strong> Volunteered with Beavers<br>
-                                - <strong>Expedition:</strong> Completed on 19th-20th August in wet conditions
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item" style="border-color: #c0c0c0; width: 100%;">
-                    <button class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="header-left">
-                            <img src="https://tse4.mm.bing.net/th/id/OIP.wJBaBhcV7BB0VNIkl4J_qwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Silver DofE Logo" class="item-logo" onerror="this.style.display='none'">
-                            <span class="item-name">Silver DofE Award</span>
-                        </div>
-                        <div class="header-right">
-                            <span class="item-rough-date">January 2026 - September 2026</span>
-                        </div>
-                        <div class="icon-container">+</div>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="content-inner">
-                            <p class="item-description">
-                                I have completed my silver DofE with my scout group in 2026. During DofE we had to handle bad terrain and weather conditions which taught us new resiliance and enduarance skills.<br><br>
-                                - <strong>Physical:</strong> 6 months of Running<br>
-                                - <strong>Skill:</strong> Website design (this website)<br>
-                                - <strong>Volunteering:</strong> Volunteered with Scouts and have since continued being a young leader with them<br>
-                                - <strong>Expedition:</strong> Completed on 3rd-5th April in a storm
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <div id="achievements-container" style="width: 100%;"></div>
             </div>
 
         </section>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        loadSectionContent(['achievement']);
+    </script>
 </body>
 </html>
