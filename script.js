@@ -17,7 +17,6 @@ function toggleAccordion(headerElement) {
 
     const isOpening = !currentItem.classList.contains('active');
 
-    // Close open accordion items within the same container
     const activeItem = container.querySelector('.accordion-item.active');
     if (activeItem && activeItem !== currentItem) {
         activeItem.classList.remove('active');
@@ -31,7 +30,6 @@ function toggleAccordion(headerElement) {
         currentItem.classList.add('active');
         content.style.maxHeight = content.scrollHeight + "px";
 
-        // Smooth scroll positioning below fixed header
         setTimeout(() => {
             const stickyHeader = document.querySelector('.sticky-header');
             const headerBottomOffset = stickyHeader ? stickyHeader.getBoundingClientRect().height : 110;
@@ -111,7 +109,7 @@ function createReferenceHTML(item) {
 }
 
 /* ==========================================================================
-   4. LIGHTBOX CONTROLS & KEYBOARD LISTENERS
+   4. LIGHTBOX CONTROLS
    ========================================================================== */
 function openLightbox(index, imgArray) {
     currentGalleryImages = imgArray;
@@ -149,38 +147,69 @@ document.addEventListener('keydown', function(e) {
 });
 
 /* ==========================================================================
-   5. DATA PARSER & CONTENT LOADER
+   5. RELIABLE LINE-BY-LINE PARSER
    ========================================================================== */
+function parseInfoTxt(text) {
+    const items = [];
+    const rawBlocks = text.split(/\[\s*ITEM\s*\]/i);
+
+    rawBlocks.forEach(block => {
+        if (!block.trim()) return;
+
+        const item = {
+            section: '',
+            name: '',
+            logo: '',
+            roughDate: '',
+            exactDates: '',
+            images: '',
+            description: '',
+            connection: '',
+            contact: '',
+            colour: ''
+        };
+
+        // Extract [DESC]...[/DESC] multi-line block safely
+        const descMatch = block.match(/\[\s*DESC\s*\]([\s\S]*?)(?:\[\/\s*DESC\s*\]|\[\s*DESC\s*\]|$)/i);
+        if (descMatch) {
+            item.description = descMatch[1].trim();
+        }
+
+        // Extract single line tags
+        const lines = block.split(/\r?\n/);
+        lines.forEach(line => {
+            const trimmed = line.trim();
+            if (trimmed.startsWith('[SECTION]')) item.section = trimmed.replace(/\[\/?SECTION\]/gi, '').trim();
+            if (trimmed.startsWith('[NAME]')) item.name = trimmed.replace(/\[\/?NAME\]/gi, '').trim();
+            if (trimmed.startsWith('[LOGO]')) item.logo = trimmed.replace(/\[\/?LOGO\]/gi, '').trim();
+            if (trimmed.startsWith('[ROUGHDATE]')) item.roughDate = trimmed.replace(/\[\/?ROUGHDATE\]/gi, '').trim();
+            if (trimmed.startsWith('[EXACTDATES]')) item.exactDates = trimmed.replace(/\[\/?EXACTDATES\]/gi, '').trim();
+            if (trimmed.startsWith('[IMAGES]')) item.images = trimmed.replace(/\[\/?IMAGES\]/gi, '').trim();
+            if (trimmed.startsWith('[CONNECTION]')) item.connection = trimmed.replace(/\[\/?CONNECTION\]/gi, '').trim();
+            if (trimmed.startsWith('[CONTACT]')) item.contact = trimmed.replace(/\[\/?CONTACT\]/gi, '').trim();
+            if (trimmed.startsWith('[COLOUR]')) item.colour = trimmed.replace(/\[\/?COLOUR\]/gi, '').trim();
+        });
+
+        if (item.name || item.section) {
+            items.push(item);
+        }
+    });
+
+    return items;
+}
+
 function loadSectionContent(targetSections) {
-    document.addEventListener("DOMContentLoaded", () => {
+    const runFetcher = () => {
         fetch('info.txt?t=' + new Date().getTime())
             .then(res => {
                 if (!res.ok) throw new Error("Could not load info.txt");
                 return res.text();
             })
             .then(text => {
-                const rawItems = text.split(/\[\/?ITEM\]/i);
-                rawItems.forEach(rawItem => {
-                    if (!rawItem.trim()) return;
+                const parsedItems = parseInfoTxt(text);
 
-                    const getTag = (tagName) => {
-                        const match = rawItem.match(new RegExp('\\[\\s*' + tagName + '\\s*\\]([\\s\\S]*?)\\[\\/\\s*' + tagName + '\\s*\\]', 'i'));
-                        return match ? match[1].trim() : '';
-                    };
-
-                    const section = getTag('SECTION').toLowerCase();
-                    const itemData = {
-                        name: getTag('NAME'),
-                        logo: getTag('LOGO'),
-                        roughDate: getTag('ROUGHDATE'),
-                        exactDates: getTag('EXACTDATES'),
-                        images: getTag('IMAGES'),
-                        description: getTag('DESC'),
-                        connection: getTag('CONNECTION'),
-                        contact: getTag('CONTACT'),
-                        colour: getTag('COLOUR')
-                    };
-
+                parsedItems.forEach(itemData => {
+                    const section = itemData.section.toLowerCase();
                     const matchesTarget = targetSections.some(target => section.includes(target));
                     if (!matchesTarget) return;
 
@@ -200,5 +229,11 @@ function loadSectionContent(targetSections) {
                 });
             })
             .catch(err => console.error("Error fetching content:", err));
-    });
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener("DOMContentLoaded", runFetcher);
+    } else {
+        runFetcher();
+    }
 }
