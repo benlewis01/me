@@ -133,3 +133,5 @@ I have completed my silver DofE with my scout group in 2026. During DofE we had 
 [CONNECTION] ROLE / CONNECTION HERE [/CONNECTION]
 [QUOTE] "QUOTE CAN GO HERE" [/QUOTE]
 [/ITEM]
+
+[REFERENCES] Stewart Beck, Samuel Cozens [/REFERENCES]
