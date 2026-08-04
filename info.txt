@@ -110,13 +110,6 @@ I have completed my silver DofE with my scout group in 2026. During DofE we had 
 
 [ITEM]
 [SECTION]Quotes[/SECTION]
-[NAME] ~~~ [/NAME]
-[CONNECTION] ~~~ [/CONNECTION]
-[QUOTE] ~~~ [/QUOTE]
-[/ITEM]
-
-[ITEM]
-[SECTION]Quotes[/SECTION]
 [NAME]David ?[/NAME]
 [CONNECTION] ~~~ [/CONNECTION]
 [QUOTE] ~~~ [/QUOTE]
@@ -124,4 +117,4 @@ I have completed my silver DofE with my scout group in 2026. During DofE we had 
 
 [ITEM]
 [SECTION] reference
-[REFERENCES] Stewart Beck, ~~~ [/REFERENCES]
+[REFERENCES] Stewart Beck [/REFERENCES]
