@@ -5,6 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ben Lewis - About Me</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* DOFE INTEGRATED CARDS STYLING */
+        .dofe-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 20px;
+            border-top: 1px dashed #cbd5e1;
+            padding-top: 20px;
+        }
+
+        .dofe-card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #808080;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .dofe-card.bronze {
+            border-left-color: #cd7f32;
+        }
+
+        .dofe-card.silver {
+            border-left-color: #c0c0c0;
+        }
+
+        .dofe-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .dofe-logo {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .dofe-card h4 {
+            font-size: 1.05rem;
+            color: #11161a;
+            margin: 0;
+        }
+
+        .dofe-card span {
+            font-size: 0.8rem;
+            color: #64748b;
+            display: block;
+        }
+
+        .dofe-card ul {
+            padding-left: 18px;
+            font-size: 0.9rem;
+            color: #475569;
+            margin-top: 8px;
+        }
+
+        .dofe-card li {
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 700px) {
+            .dofe-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -20,7 +90,7 @@
             </div>
             
             <nav class="header-nav">
-                <a href="index.html" class="nav-link">Home</a>
+                <a href="home.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link active-page">About Me</a>
                 <a href="education.html" class="nav-link">Education</a>
                 <a href="experience.html" class="nav-link">Work Experience</a>
@@ -55,7 +125,7 @@
         </section>
 
         <section class="grid-section">
-            <h2>Scouts</h2>
+            <h2>Scouts & Duke of Edinburgh</h2>
             <div class="grid-container profile-card profile-layout scouts-layout">
                 <div class="grid-left-media">
                     <div class="scouts-gallery">
@@ -64,7 +134,41 @@
                     </div>
                 </div>
                 <div class="grid-right-text">
-                    <p>I love my involvement with the Scouts as it has given me so many opportunities. I am currently working towards my silver Duke of Edinburgh award and have been selected to go to Poland for the World Scout Jamboree in summer 2027. I also took on the Six Summits challenge, which is the hardest thing I’ve ever done! As well as doing expeditions and other challenges with scouts, i also help out with the younger sections by being a young leader with the Scout Troop and help younger people learn new skills and have a good time at scouts.</p>
+                    <p>I love my involvement with the Scouts as it has given me so many opportunities. I have been selected to go to Poland for the World Scout Jamboree in summer 2027. I also took on the Six Summits challenge, which is the hardest thing I’ve ever done! As well as doing expeditions and other challenges with scouts, I also help out with the younger sections by being a young leader with the Scout Troop, helping younger people learn new skills and have a great time.</p>
+                    
+                    <div class="dofe-grid">
+                        <div class="dofe-card bronze">
+                            <div class="dofe-card-header">
+                                <img src="https://opendofe.org/images/template-content/square_level_logo_-_BRONZE.jpg" alt="Bronze DofE" class="dofe-logo" onerror="this.style.display='none'">
+                                <div>
+                                    <h4>Bronze DofE Award</h4>
+                                    <span>June 2024 - January 2025</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><strong>Physical:</strong> 6 months of Climbing</li>
+                                <li><strong>Skill:</strong> Photography course</li>
+                                <li><strong>Volunteering:</strong> Volunteered with Beavers</li>
+                                <li><strong>Expedition:</strong> Completed Aug 19th–20th in wet conditions</li>
+                            </ul>
+                        </div>
+
+                        <div class="dofe-card silver">
+                            <div class="dofe-card-header">
+                                <img src="https://tse4.mm.bing.net/th/id/OIP.wJBaBhcV7BB0VNIkl4J_qwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Silver DofE" class="dofe-logo" onerror="this.style.display='none'">
+                                <div>
+                                    <h4>Silver DofE Award</h4>
+                                    <span>January 2026 - September 2026</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><strong>Physical:</strong> 6 months of Running</li>
+                                <li><strong>Skill:</strong> Website design (this website!)</li>
+                                <li><strong>Volunteering:</strong> Young Leader with Scouts</li>
+                                <li><strong>Expedition:</strong> Completed April 3rd–5th in stormy conditions</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
