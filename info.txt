@@ -22,18 +22,6 @@ I also was apart of the student council and prefects where i helped create a enj
 [/ITEM]
 
 [ITEM]
-[SECTION]education[/SECTION]
-[NAME] WMG / HofE Placeholder (Y12-Y13)[/NAME]
-[COLOUR] #005F71 [/COLOUR]
-[LOGO]https://tse3.mm.bing.net/th/id/OIP.GjeHdMiH8C9VLrsDLOCa-AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
-[ROUGHDATE]2026 - 2028[/ROUGHDATE]
-[EXACTDATES]September 2026 - June 2028[/EXACTDATES]
-[DESC]
-...
-[/DESC]
-[/ITEM]
-
-[ITEM]
 [SECTION]experience[/SECTION]
 [COLOUR] #015480 [/COLOUR]
 [NAME]University Of Nottingham (Engineering Faculty)[/NAME]
@@ -59,8 +47,8 @@ Across this week i learnt many new skills from testing parts and assembling circ
 [NAME]Southco[/NAME]
 [COLOUR] #485865 [/COLOUR]
 [LOGO]https://hwchamber.co.uk/wp-content/uploads/2020/01/Southco.png[/LOGO]
-[ROUGHDATE]September 2025[/ROUGHDATE]
-[EXACTDATES]Exact Dates TBC - September 2025[/EXACTDATES]
+[ROUGHDATE]July 2025[/ROUGHDATE]
+[EXACTDATES] 22nd - 23rd July 2025[/EXACTDATES]
 [DESC]
 During the summer holidays of 2025, i did a 2day work expereince program with Southco Manufacturing in Worcester. During my time at Southco i learnt how to use multiple different modeling softwares such as NX Design (Siemens) and Solidworks. I practiced recreating parts and also designed my own parts. 
 I designed a 1:4scale F1 tyre and stand for it which was printed on a resin printer overnight. I also got a tour around the Worcester Factory where i saw many examples of production lines and manufacturing techniques such as Injection Moulding.
@@ -73,8 +61,8 @@ I designed a 1:4scale F1 tyre and stand for it which was printed on a resin prin
 [NAME]Aston Martin[/NAME]
 [COLOUR] #1F7652 [/COLOUR]
 [LOGO]https://tse3.mm.bing.net/th/id/OIP.oIO6fi_SPw9ko1UeKAqrzgHaDt?r=0&rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
-[ROUGHDATE]September 2026[/ROUGHDATE]
-[EXACTDATES]24th - 28th September 2026[/EXACTDATES]
+[ROUGHDATE]August 2026[/ROUGHDATE]
+[EXACTDATES]24th - 28th August 2026[/EXACTDATES]
 [DESC]
 Aston Martin Placeholder
 [/DESC]
