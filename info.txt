@@ -110,15 +110,15 @@ I have completed my silver DofE with my scout group in 2026. During DofE we had 
 
 [ITEM]
 [SECTION]Quotes[/SECTION]
-[NAME]Samuel Cozens[/NAME]
-[CONNECTION]Teacher & Tutor (Y7-10) - Heart Of England School[/CONNECTION]
+[NAME] ~~~ [/NAME]
+[CONNECTION] ~~~ [/CONNECTION]
 [QUOTE] ~~~ [/QUOTE]
 [/ITEM]
 
 [ITEM]
 [SECTION]Quotes[/SECTION]
 [NAME]David ?[/NAME]
-[CONNECTION] ROLE / CONNECTION HERE [/CONNECTION]
+[CONNECTION] ~~~ [/CONNECTION]
 [QUOTE] ~~~ [/QUOTE]
 [/ITEM]
 
