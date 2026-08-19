@@ -97,15 +97,29 @@ function createAccordionHTML(item) {
     `;
 }
 
-function createQuoteCardHTML(item) {
+function createTestimonialAccordionHTML(item) {
     if (!item.name || item.name.trim() === '') return '';
-    const quoteText = item.quote || item.description || '';
+
+    let formattedFullQuote = (item.fullQuote || item.description || "").replace(/\n/g, '<br>');
+    formattedFullQuote = formattedFullQuote.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+    const keyMessage = item.keyMessage || "";
+    const accentColor = item.colour && item.colour.trim() !== '' ? item.colour : '#cbd5e1';
+
     return `
-        <div class="reference-card">
-            <h3>${item.name}</h3>
-            <p class="ref-position">${item.connection || ''}</p>
-            <div class="ref-contact">
-                <span>"${quoteText}"</span>
+        <div class="accordion-item" style="border-color: ${accentColor}; width: 100%; margin-bottom: 14px;">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="header-left" style="flex-direction: column; align-items: flex-start; gap: 4px;">
+                    <span class="item-name">${item.name}</span>
+                    <span style="font-size: 0.85rem; color: #718096; font-weight: 500;">${item.connection || ''}</span>
+                    <p style="font-size: 0.95rem; color: #4a5568; font-weight: normal; margin-top: 4px; text-align: left;">"${keyMessage}"</p>
+                </div>
+                <div class="icon-container">+</div>
+            </button>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <p class="item-description">"${formattedFullQuote}"</p>
+                </div>
             </div>
         </div>
     `;
@@ -171,6 +185,8 @@ function parseInfoTxt(text) {
             contact: '',
             colour: '',
             quote: '',
+            keyMessage: '',
+            fullQuote: '',
             referencesList: ''
         };
 
@@ -179,6 +195,12 @@ function parseInfoTxt(text) {
 
         const quoteMatch = block.match(/\[\s*QUOTE\s*\]([\s\S]*?)(?:\[\/\s*QUOTE\s*\]|\[\s*QUOTE\s*\]|$)/i);
         if (quoteMatch) item.quote = quoteMatch[1].trim();
+
+        const keyMatch = block.match(/\[\s*KEY\s*\]([\s\S]*?)(?:\[\/\s*KEY\s*\]|\[\s*KEY\s*\]|$)/i);
+        if (keyMatch) item.keyMessage = keyMatch[1].trim();
+
+        const fQuoteMatch = block.match(/\[\s*FQUOTE\s*\]([\s\S]*?)(?:\[\/\s*FQUOTE\s*\]|\[\s*FQUOTE\s*\]|$)/i);
+        if (fQuoteMatch) item.fullQuote = fQuoteMatch[1].trim();
 
         const refListMatch = block.match(/\[\s*REFERENCES\s*\]([\s\S]*?)(?:\[\/\s*REFERENCES\s*\]|\[\s*REFERENCES\s*\]|$)/i);
         if (refListMatch) item.referencesList = refListMatch[1].trim();
@@ -231,7 +253,7 @@ function loadSectionContent(targetSections) {
                         if (el) el.innerHTML += createAccordionHTML(itemData);
                     } else if (section.includes('quote') || section.includes('testimonial')) {
                         const el = document.getElementById('quotes-container');
-                        if (el) el.innerHTML += createQuoteCardHTML(itemData);
+                        if (el) el.innerHTML += createTestimonialAccordionHTML(itemData);
                     } else if (section.includes('reference')) {
                         if (itemData.referencesList) {
                             const el = document.getElementById('references-footer-container');
