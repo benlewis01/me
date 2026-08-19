@@ -21,7 +21,7 @@ body {
 }
 
 /* ==========================================================================
-   2. STICKY GREY HEADER & NAVIGATION
+   2. STICKY HEADER & NAVIGATION
    ========================================================================== */
 .sticky-header {
     position: fixed;
@@ -29,11 +29,11 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #808080; 
-    color: #6EB1FF;
+    background-color: #6EB1FF;  
+    color: #ffffff;
     padding: 8px 4%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    border-bottom: 1px solid #6c6c6c;
+    border-bottom: 1px solid #4a90e2;
 }
 
 .header-content {
@@ -69,19 +69,19 @@ body {
 
 .contact-info .divider {
     margin: 0 8px;
-    color: #cbd5e1;
+    color: #e2e8f0;
 }
 
 .header-nav {
     display: flex;
     justify-content: center;      
     align-items: center;
-    gap: 20px; 
-    border-top: 1px solid #a3a3a3;
+    gap: 20px;    
+    border-top: 1px solid #4a90e2;
     padding-top: 6px;
     padding-bottom: 2px;
     width: 100%;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;    
 }
 
 .nav-link {
@@ -150,7 +150,7 @@ body {
 .grid-left-text p, .grid-right-text p {
     color: #4a5568;
     font-size: 1.05rem;
-    text-align: justify;
+    text-align: left; /* Changed from justify to left for ragged right edge */
 }
 
 /* ==========================================================================
@@ -201,22 +201,22 @@ body {
 .header-left {
     display: flex;
     align-items: center;
-    flex: 1;               
-    min-width: 0;          
+    flex: 1;                 
+    min-width: 0;           
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    flex-shrink: 0;        
+    flex-shrink: 0;         
 }
 
 .item-logo {
-    height: 30px;          
-    width: auto;           
-    max-width: 120px;      
-    object-fit: contain;   
-    flex-shrink: 0;        
+    height: 30px;           
+    width: auto;            
+    max-width: 120px;       
+    object-fit: contain;    
+    flex-shrink: 0;         
     margin-right: 16px;
 }
 
@@ -269,6 +269,7 @@ body {
 .item-description {
     color: #2d3748;
     font-size: 1.05rem;
+    text-align: left; /* Left-aligned for natural spacing */
 }
 
 .item-collage-grid {
@@ -341,7 +342,7 @@ body {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .profile-photo-placeholder {
         max-width: 180px;
         margin: 0 auto;
@@ -357,7 +358,7 @@ body {
     body {
         padding-top: 190px; 
     }
-    
+
     .header-top-row {
         flex-direction: column;
         text-align: center;
@@ -405,7 +406,7 @@ body {
     .scouts-gallery {
         flex-direction: column; 
     }
-    
+
     .scouts-gallery .gallery-img {
         width: 100%;
     }
