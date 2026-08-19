@@ -74,8 +74,8 @@ Across this week i learnt many new skills from testing parts and assembling circ
 [NAME]Bronze DofE[/NAME]
 [COLOUR] #A95139 [/COLOUR]
 [LOGO]https://opendofe.org/images/template-content/square_level_logo_-_BRONZE.jpg[/LOGO]
-[ROUGHDATE]June 2024 - January 2025[/ROUGHDATE]
-[EXACTDATES]N/A[/EXACTDATES]
+[ROUGHDATE]2024-2025[/ROUGHDATE]
+[EXACTDATES]June 2024 - January 2025[/EXACTDATES]
 [DESC]
 I have completed my bronze DofE with my scout group in 2024/5. During DofE I learnt many new skills for teamwork and perseverance.
  -**Physical (6Months)** - Climbing
@@ -90,8 +90,8 @@ I have completed my bronze DofE with my scout group in 2024/5. During DofE I lea
 [NAME]Silver DofE[/NAME]
 [COLOUR] #B4B2B0 [/COLOUR]
 [LOGO]https://tse4.mm.bing.net/th/id/OIP.wJBaBhcV7BB0VNIkl4J_qwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
-[ROUGHDATE]January 2026 - September 2026[/ROUGHDATE]
-[EXACTDATES]N/A[/EXACTDATES]
+[ROUGHDATE]2026[/ROUGHDATE]
+[EXACTDATES]January 2026 - September 2026[/EXACTDATES]
 [DESC]
 I have completed my silver DofE with my scout group in 2026. During DofE we had to handle bad terrain and weather conditions which taught us new resiliance and enduarance skills.
  -**Physical (6Months)** - Running
