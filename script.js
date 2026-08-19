@@ -103,16 +103,17 @@ function createTestimonialAccordionHTML(item) {
     let formattedFullQuote = (item.fullQuote || item.description || "").replace(/\n/g, '<br>');
     formattedFullQuote = formattedFullQuote.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
-    const keyMessage = item.keyMessage || "";
+    let formattedKeyMessage = (item.keyMessage || "").replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
     const accentColor = item.colour && item.colour.trim() !== '' ? item.colour : '#cbd5e1';
 
     return `
-        <div class="accordion-item" style="border-color: ${accentColor}; width: 100%; margin-bottom: 14px;">
+        <div class="accordion-item" style="border-color: ${accentColor}; margin-bottom: 0;">
             <button class="accordion-header" onclick="toggleAccordion(this)">
                 <div class="header-left" style="flex-direction: column; align-items: flex-start; gap: 4px;">
                     <span class="item-name">${item.name}</span>
                     <span style="font-size: 0.85rem; color: #718096; font-weight: 500;">${item.connection || ''}</span>
-                    <p style="font-size: 0.95rem; color: #4a5568; font-weight: normal; margin-top: 4px; text-align: left;">"${keyMessage}"</p>
+                    <p style="font-size: 0.95rem; color: #4a5568; font-weight: normal; margin-top: 4px; text-align: left;">"${formattedKeyMessage}"</p>
                 </div>
                 <div class="icon-container">+</div>
             </button>
