@@ -105,14 +105,16 @@ I have completed my silver DofE with my scout group in 2026. During DofE we had 
 [SECTION]Quotes[/SECTION]
 [NAME]Stewart Beck[/NAME]
 [CONNECTION]Scout Leader - 2nd Balsall Common Scouts[/CONNECTION]
-[QUOTE] **A future leader, no doubt!** [/QUOTE]
+[KEY] **A future leader, no doubt!** [/KEY]
+[FQUOTE] [/FQUOTE]
 [/ITEM]
 
 [ITEM]
 [SECTION]Quotes[/SECTION]
 [NAME]David ?[/NAME]
 [CONNECTION] ~~~ [/CONNECTION]
-[QUOTE] ~~~ [/QUOTE]
+[KEY] ~~~ [/KEY]
+[FQUOTE] ~~~ [/FQUOTE]
 [/ITEM]
 
 [ITEM]
