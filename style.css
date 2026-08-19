@@ -13,15 +13,15 @@ html {
 }
 
 body {
-    background-color: #fcfdfe; 
-    color: #1e252b;
-    line-height: 1.5;
+    background-color: #f8fafc; 
+    color: #1e293b;
+    line-height: 1.6;
     padding-top: 110px; 
     overflow-x: hidden; 
 }
 
 /* ==========================================================================
-   2. STICKY GREY HEADER & NAVIGATION
+   2. STICKY HEADER & NAVIGATION
    ========================================================================== */
 .sticky-header {
     position: fixed;
@@ -29,19 +29,15 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #808080; 
-    color: #6EB1FF;
-    padding: 8px 4%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    border-bottom: 1px solid #6c6c6c;
+    background: #ffffff; 
+    border-bottom: 1px solid #e2e8f0;
+    padding: 15px 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
 .header-content {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
 }
 
 .header-top-row {
@@ -53,18 +49,14 @@ body {
 }
 
 .header-top-row h1 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: #ffffff;
-    line-height: 1.2;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #0f172a;
 }
 
 .contact-info {
-    font-size: 0.85rem;
-    color: #f1f5f9;
-    display: flex;
-    align-items: center;
+    font-size: 0.9rem;
+    color: #64748b;
 }
 
 .contact-info .divider {
@@ -73,175 +65,104 @@ body {
 }
 
 .header-nav {
+    margin-top: 10px;
     display: flex;
-    justify-content: center;      
-    align-items: center;
-    gap: 20px; 
-    border-top: 1px solid #a3a3a3;
-    padding-top: 6px;
-    padding-bottom: 2px;
-    width: 100%;
-    flex-wrap: wrap; 
+    gap: 15px;
 }
 
 .nav-link {
-    color: #ffffff;
     text-decoration: none;
-    font-size: 0.88rem;
+    color: #64748b;
     font-weight: 500;
-    letter-spacing: 0.3px;
-    transition: opacity 0.15s ease;
-    opacity: 0.9;
-    white-space: nowrap;          
-    line-height: 1;
+    font-size: 0.95rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
 }
 
 .nav-link:hover, .nav-link.active-page {
-    opacity: 1;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    color: #2563eb;
+    background-color: #eff6ff;
 }
 
 /* ==========================================================================
-   3. RESPONSIVE LAYOUT MATRIX
+   3. MAIN WRAPPER & SECTIONS
    ========================================================================== */
 .main-wrapper {
-    width: 92%; 
-    max-width: 1200px; 
-    margin: 0 auto;
-    padding: 30px 0 80px 0;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
-.grid-section, .accordion-section {
-    margin-bottom: 50px;
-}
-
-.grid-section h2, .accordion-section h2, .page-main-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #11161a;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.grid-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #0f172a;
     border-bottom: 2px solid #e2e8f0;
     padding-bottom: 8px;
-    margin-bottom: 24px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 5%; 
-    align-items: center;
-}
-
-.profile-card, .accordion-item, .reference-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px; 
-    overflow: hidden;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.profile-layout {
-    grid-template-columns: 30% 65%;
-    padding: 24px;
-}
-
-.grid-left-text p, .grid-right-text p {
-    color: #4a5568;
-    font-size: 1.05rem;
-    text-align: justify;
 }
 
 /* ==========================================================================
-   4. MEDIA CONTAINERS
-   ========================================================================== */
-.profile-photo-placeholder, .gallery-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    display: block;
-}
-
-.scouts-gallery {
-    display: flex;
-    gap: 12px;
-    width: 100%;
-    align-items: center;
-}
-
-.scouts-gallery .gallery-img {
-    width: calc(50% - 6px); 
-}
-
-/* ==========================================================================
-   5. ACCORDION CONTROLS
+   4. ACCORDION COMPONENTS & LEFT-ALIGNED TEXT
    ========================================================================== */
 .accordion-item {
-    margin-bottom: 14px;
-    border-top: 5px solid #cbd5e1; 
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left-width: 5px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s;
 }
 
 .accordion-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .accordion-header {
     width: 100%;
+    background: none;
+    border: none;
+    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 20px;
-    background: #ffffff;
-    border: none;
     cursor: pointer;
+    text-align: left;
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    flex: 1;               
-    min-width: 0;          
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;        
+    gap: 12px;
 }
 
 .item-logo {
-    height: 30px;          
-    width: auto;           
-    max-width: 120px;      
-    object-fit: contain;   
-    flex-shrink: 0;        
-    margin-right: 16px;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 4px;
 }
 
 .item-name {
-    font-size: 1.05rem;
     font-weight: 600;
-    color: #11161a;
+    font-size: 1.05rem;
+    color: #1e293b;
 }
 
-.item-rough-date {
-    font-size: 0.95rem;
-    color: #718096;
-    margin-right: 20px;
+.header-right {
+    font-size: 0.9rem;
+    color: #64748b;
 }
 
 .icon-container {
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: #718096;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.25s ease-out; 
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #64748b;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 12px;
 }
 
 .accordion-item.active .icon-container {
@@ -251,248 +172,96 @@ body {
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.25s ease-out; 
-    background: #fafbfc;
-    border-top: 1px solid #edf2f7;
+    transition: max-height 0.3s ease-out;
+    background: #fdfdfd;
+    border-top: 1px solid transparent;
+}
+
+.accordion-item.active .accordion-content {
+    border-top-color: #f1f5f9;
 }
 
 .content-inner {
-    padding: 20px;
+    padding: 16px 20px 20px 20px;
+    text-align: left; /* Ensures text is left-aligned */
 }
 
 .exact-dates {
-    font-size: 0.95rem;
-    color: #718096;
+    font-size: 0.85rem;
+    color: #64748b;
     margin-bottom: 10px;
 }
 
 .item-description {
-    color: #2d3748;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #334155;
+    margin: 0;
+    text-align: left; /* Explicitly left-aligned */
 }
 
+/* ==========================================================================
+   5. IMAGE COLLAGES & THUMBNAILS
+   ========================================================================== */
 .item-collage-grid {
-    display: flex;          
-    flex-wrap: wrap;        
-    gap: 12px;
-    margin-top: 16px;
-    border-top: 1px dashed #e2e8f0;
-    padding-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+    margin-top: 15px;
 }
 
 .collage-thumb {
-    height: 110px;          
-    width: auto;            
-    max-width: 100%;        
-    object-fit: contain;    
-    border-radius: 6px;
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
     border: 1px solid #e2e8f0;
-    background-color: #f8f9fa;
-    transition: transform 0.2s ease;
-    cursor: pointer;        
+    transition: opacity 0.2s;
 }
 
 .collage-thumb:hover {
-    transform: scale(1.03);
+    opacity: 0.85;
 }
 
 /* ==========================================================================
-   6. REFERENCES CARDS
+   6. TESTIMONIALS GRID (Half-width on computer, full-width on mobile)
    ========================================================================== */
-.references-grid {
+#quotes-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    align-items: start;
 }
 
-.reference-card {
-    padding: 20px;
-}
-
-.reference-card h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: #11161a;
-    margin-bottom: 4px;
-}
-
-.ref-position {
-    font-size: 0.9rem;
-    color: #718096;
-    font-weight: 500;
-    margin-bottom: 14px;
-}
-
-.ref-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    font-size: 0.95rem;
-    color: #4a5568;
-    border-top: 1px solid #edf2f7;
-    padding-top: 12px;
-}
-
-/* ==========================================================================
-   7. MOBILE RESPONSIVE
-   ========================================================================== */
 @media (max-width: 900px) {
-    .grid-container, .profile-card.profile-layout, .interests-layout, .scouts-layout, .references-grid {
+    #quotes-container {
         grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .profile-photo-placeholder {
-        max-width: 180px;
-        margin: 0 auto;
-        display: block;
-    }
-
-    body {
-        padding-top: 150px; 
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        padding-top: 190px; 
-    }
-    
-    .header-top-row {
-        flex-direction: column;
-        text-align: center;
-        gap: 4px;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        gap: 2px;
-    }
-
-    .contact-info .divider {
-        display: none; 
-    }
-
-    .accordion-header {
-        flex-wrap: wrap;
-        padding: 14px 16px;
-    }
-
-    .header-left {
-        flex: 1 1 80%; 
-    }
-
-    .header-right {
-        width: 100%;
-        justify-content: flex-start;
-        margin-top: 6px;
-    }
-
-    .item-rough-date {
-        margin-right: 0;
-        font-size: 0.85rem;
-    }
-
-    .icon-container {
-        position: absolute;
-        right: 16px;
-    }
-
-    .accordion-item {
-        position: relative;
-    }
-
-    .scouts-gallery {
-        flex-direction: column; 
-    }
-    
-    .scouts-gallery .gallery-img {
-        width: 100%;
     }
 }
 
 /* ==========================================================================
-   8. LIGHTBOX MODAL
+   7. LIGHTBOX MODAL
    ========================================================================== */
-.lightbox {
+#lightbox-modal {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(17, 22, 26, 0.96); 
+    background: rgba(0, 0, 0, 0.85);
     z-index: 2000;
-    display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
 }
 
-.lightbox.visible {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.lightbox-content-wrapper {
-    max-width: 85%;
-    max-height: 75%;
+#lightbox-modal.visible {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
 
 #lightbox-img {
-    max-width: 100%;
-    max-height: 70vh;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-}
-
-.lightbox-arrow {
-    position: absolute;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 3.5rem;
-    cursor: pointer;
-    padding: 20px;
-    opacity: 0.5;
-    transition: opacity 0.15s ease, color 0.15s ease;
-    z-index: 2100;
-}
-
-.lightbox-arrow:hover {
-    opacity: 1;
-    color: #4da3ff;
-}
-
-.prev { left: -100px; } 
-.next { right: -100px; }
-
-.lightbox-close-btn {
-    position: absolute;
-    bottom: 40px;
-    background-color: #232d35;
-    border: 1px solid #3a4754;
-    color: #ffffff;
-    padding: 12px 36px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    z-index: 2100;
-}
-
-@media (max-width: 1100px) {
-    .lightbox-arrow { font-size: 2.5rem; }
-    .prev { left: -60px; }
-    .next { right: -60px; }
-}
-
-@media (max-width: 800px) {
-    .prev { left: 2%; } 
-    .next { right: 2%; }
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 4px;
 }
