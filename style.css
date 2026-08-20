@@ -162,7 +162,16 @@ body {
 /* ==========================================================================
    4. MEDIA CONTAINERS
    ========================================================================== */
-.profile-photo-placeholder, .gallery-img {
+.profile-photo-placeholder {
+    width: 100%;
+    height: 240px; /* Matches the text height cleanly on desktop */
+    object-fit: cover; /* Crops nicely without stretching */
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    display: block;
+}
+
+.gallery-img {
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -355,14 +364,15 @@ body {
 @media (max-width: 900px) {
     .grid-container, .profile-card.profile-layout, .interests-layout, .scouts-layout, .references-grid, .testimonials-grid {
         grid-template-columns: 1fr;
-        gap: 20px; /* Vertical spacing between stacked cards on mobile */
+        gap: 20px; 
     }
     
     .reference-card, .testimonial-card {
-        margin-bottom: 16px; /* Additional vertical spacing safeguard */
+        margin-bottom: 16px; 
     }
     
     .profile-photo-placeholder {
+        height: auto; /* Let it scale naturally on mobile */
         max-width: 180px;
         margin: 0 auto;
         display: block;
