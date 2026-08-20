@@ -7,17 +7,29 @@
 [EXACTDATES]September 2021 - June 2026[/EXACTDATES]
 [DESC]
 At Heart Of England School I Sat 10 GCSE's:
-- English Literature ()
-- English Language ()
-- Mathmatics ()
-- Combined Science ( , )
-- Product Design ()
-- Computer Science ()
-- French ()
-- Religious Studies ()
-- Geography ()
+- English Literature (6)
+- English Language (6)
+- Mathmatics (7)
+- Combined Science (7,7)
+- Product Design (7)
+- Computer Science (6)
+- French (3)
+- Religious Studies (5)
+- Geography (7)
 
 I also was apart of the student council and prefects where i helped create a enjoyable school enviroment and help out with school activities. I also took part in 5school productions during my time at HofE.
+[/DESC]
+[/ITEM]
+
+[ITEM]
+[SECTION]education[/SECTION]
+[NAME]WMG Academy For Young Engineers (Y12-13)[/NAME]
+[COLOUR] #0159A3 [/COLOUR]
+[LOGO]https://www.wmgacademy.org.uk/wp-content/uploads/2018/12/wmg_academy_logo.png[/LOGO]
+[ROUGHDATE]2026 - 2028[/ROUGHDATE]
+[EXACTDATES]September 2026 - June 2028[/EXACTDATES]
+[DESC]
+At WMG Academy I am doing 3 A-Levels (Product Design, Maths, Physics)
 [/DESC]
 [/ITEM]
 
