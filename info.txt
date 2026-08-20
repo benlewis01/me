@@ -6,7 +6,7 @@
 [ROUGHDATE]2026 - 2028[/ROUGHDATE]
 [EXACTDATES]September 2026 - June 2028[/EXACTDATES]
 [DESC]
-At WMG Academy I am doing 3 A-Levels (Product Design, Maths, Physics)
+At WMG Academy I am doing 3 A-Levels (Maths, Physics, Product Design)
 [/DESC]
 [/ITEM]
 
