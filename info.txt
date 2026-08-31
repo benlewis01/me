@@ -42,9 +42,9 @@ I also was part of the student council and prefects where I helped create a enjo
 [ROUGHDATE]August 2026[/ROUGHDATE]
 [EXACTDATES]24th - 28th August 2026[/EXACTDATES]
 [DESC]
-Aston Martin Placeholder
+During the 2026 summer holidays, I took part in a week of work experience at Aston Martin. During this week i moved throughout many different areas of production. I started my week off by helping run End Of Line testing using a VCATS system and helped put on final parts of the cars. I then also went into the Quality department where I inspected cars at both the end of the production line and before they were sent out to customers after adjustments and testing. I then also helped build doors for the cars on the main production line, which involved putting on and connecting window motors and other connections in the doors. My third day involved preparing a car body for body hold testing and then performing a road test in a finished car. On my fourth day, i was in the trim shop where i helped produce leather parts for the seats, wheels, doors and headliners. This included running the embroidery and embossing machines, putting together steering wheels and sticking leather onto the seats. For my final day i was on the Valhalla production line where i assisted in connecting the wiring harness, steering columns, dashboards and interior trim.
 [/DESC]
-[IMAGES][/IMAGES]
+[IMAGES]am6.jpeg, am3.jpeg, am4.jpeg, am5.jpeg, am2.jpeg, am1.jpeg[/IMAGES]
 [/ITEM]
 
 [ITEM]
