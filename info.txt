@@ -27,11 +27,29 @@ At Heart Of England School I Sat 10 GCSE's:
 - English Language (6)
 - Computer Science (6)
 - Religious Studies (5)
-- French (3)
 
 I also was part of the student council and prefects where I helped create a enjoyable school enviroment and help out with school activities. I also took part in five school productions during my time at HofE.
 [/DESC]
 [IMAGES] HofE1.jpeg [/IMAGES]
+[/ITEM]
+
+[ITEM]
+[SECTION] experience[/SECTION]
+[NAME]JLR Creative Design Visit - School Activity[/NAME]
+[COLOUR] #49788A [/COLOUR]
+[LOGO]https://tse3.mm.bing.net/th/id/OIP.DsQDAtieMADoj4TCFnj5QAHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
+[ROUGHDATE]November 2026[/ROUGHDATE]
+[EXACTDATES]12th November 2026[/EXACTDATES]
+[DESC]
+On the 12th November 2026, with WMG, I got the opportunity to visit JLRs Gaydon Facility. When we were at Gaydon, we were given the opportunity to take part in multiple activities, aswell as receiving a tour of their Creative department facilities. I took part in activities including:
+- Structural sketching of design ideas for parts of cars
+- Assembling untrimmed parts of cars onto a substrate
+- Clay modelling skills development
+- Working with the materiality team to customise Range Rover exteriors based on client profiles.
+
+We were also given the opportunity to speak with many staff at JLR and received lots of information from the early careers staff during presentations.
+[/DESC]
+[IMAGES]jr1.jpeg, jlr2.jpeg, jlr3.jpeg, jlr4.jpeg[/IMAGES]
 [/ITEM]
 
 [ITEM]
