@@ -53,6 +53,12 @@ function createAccordionHTML(item) {
 
     let formattedDescription = (item.description || "").replace(/\n/g, '<br>');
     formattedDescription = formattedDescription.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    // Fixed Custom Link Parser (ignores slashes inside https://)
+    formattedDescription = formattedDescription.replace(
+        /\[\s*LINK\s*:\s*(.*?)\s+\/\s+DISPLAY\s*:\s*(.*?)\s*\]/gi, 
+        '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: #0284c7; text-decoration: underline;">$2</a>'
+    );
 
     const logoHTML = item.logo && item.logo.trim() !== '' 
         ? `<img src="${item.logo}" alt="Logo" class="item-logo" onerror="this.style.display='none'">` 
@@ -277,20 +283,3 @@ function loadSectionContent(targetSections) {
         runFetcher();
     }
 }
-/* FUNCTION FOR HYPERLINKS /*
-function createAccordionHTML(item) {
-    if (!item.name || item.name.trim() === '') return '';
-
-    let formattedDescription = (item.description || "").replace(/\n/g, '<br>');
-    formattedDescription = formattedDescription.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    
-    // Custom Link Parser: [LINK:url / DISPLAY:text]
-    formattedDescription = formattedDescription.replace(
-        /\[\s*LINK\s*:\s*(.*?)\s*\/\s*DISPLAY\s*:\s*(.*?)\s*\]/gi, 
-        '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: #0284c7; text-decoration: underline;">$2</a>'
-    );
-
-    const logoHTML = item.logo && item.logo.trim() !== '' 
-        ? `<img src="${item.logo}" alt="Logo" class="item-logo" onerror="this.style.display='none'">` 
-        : '';
-      
