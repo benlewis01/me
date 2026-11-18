@@ -98,7 +98,7 @@ During my time at nottingham univeristy, i moved throughout the Engineering Facu
 
 Across this week i learnt many new skills from testing parts and assembling circuits to 3D modeling, designing and machine handeling.
 [/DESC]
-[IMAGES]not1.jpeg, not2.jpeg, not3.jpeg, not4.jpeg, not5.jpeg, not6.jpeg, not7.jpeg, not8.jpeg[/IMAGES]
+[IMAGES]not1.jpeg, not2.jpeg, not3.jpeg, not4.jpeg, not5.jpeg, not6.jpeg, not7.jpeg, not8.jpeg,not9.jpeg, not10.jpeg, not11.jpeg, not12.jpeg[/IMAGES]
 [/ITEM]
 
 [ITEM]
@@ -123,7 +123,7 @@ I have completed my bronze DofE with my scout group in 2024/5. During DofE I lea
 [COLOUR] #B4B2B0 [/COLOUR]
 [LOGO]https://tse4.mm.bing.net/th/id/OIP.wJBaBhcV7BB0VNIkl4J_qwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3[/LOGO]
 [ROUGHDATE]2026[/ROUGHDATE]
-[EXACTDATES]January 2026 - September 2026[/EXACTDATES]
+[EXACTDATES]January 2026 - October 2026[/EXACTDATES]
 [DESC]
 I have completed my silver DofE with my scout group in 2026. During DofE we had to handle bad terrain and weather conditions which taught us new resiliance and enduarance skills.
  -**Physical (6Months)** - Running
