@@ -1,12 +1,12 @@
 /* ==========================================================================
-   1. GLOBAL VARIABLES & LIGHTBOX STATE
+1. GLOBAL VARIABLES & LIGHTBOX STATE
    ========================================================================== */
 let currentGalleryImages = [];
 let currentImageIndex = 0;
 let lightboxActive = false; 
 
 /* ==========================================================================
-   2. ACCORDION EXPANSION & AUTO-SCROLL
+2. ACCORDION EXPANSION & AUTO-SCROLL
    ========================================================================== */
 function toggleAccordion(headerElement) {
     const currentItem = headerElement.parentElement;
@@ -46,7 +46,7 @@ function toggleAccordion(headerElement) {
 }
 
 /* ==========================================================================
-   3. DYNAMIC HTML BUILDERS
+3. DYNAMIC HTML BUILDERS
    ========================================================================== */
 function createAccordionHTML(item) {
     if (!item.name || item.name.trim() === '') return '';
@@ -127,7 +127,7 @@ function createTestimonialAccordionHTML(item) {
 }
 
 /* ==========================================================================
-   4. LIGHTBOX CONTROLS
+4. LIGHTBOX CONTROLS
    ========================================================================== */
 function openLightbox(index, imgArray) {
     currentGalleryImages = imgArray;
@@ -165,7 +165,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 /* ==========================================================================
-   5. RELIABLE LINE-BY-LINE PARSER
+5. RELIABLE LINE-BY-LINE PARSER
    ========================================================================== */
 function parseInfoTxt(text) {
     const items = [];
@@ -240,7 +240,7 @@ function loadSectionContent(targetSections) {
 
                 parsedItems.forEach(itemData => {
                     const section = itemData.section.toLowerCase();
-                    const matchesTarget = targetSections.some(target => section.includes(target));
+                    const matchesTarget = targetSections.some(target => section.includes(target.toLowerCase()));
                     if (!matchesTarget) return;
 
                     if (section.includes('education')) {
@@ -248,6 +248,9 @@ function loadSectionContent(targetSections) {
                         if (el) el.innerHTML += createAccordionHTML(itemData);
                     } else if (section.includes('experience') || section.includes('work')) {
                         const el = document.getElementById('experience-container');
+                        if (el) el.innerHTML += createAccordionHTML(itemData);
+                    } else if (section.includes('schoolactivities') || section.includes('school-activities')) {
+                        const el = document.getElementById('schoolactivities-container');
                         if (el) el.innerHTML += createAccordionHTML(itemData);
                     } else if (section.includes('achievement')) {
                         const el = document.getElementById('achievements-container');
