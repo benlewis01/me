@@ -53,6 +53,12 @@ function createAccordionHTML(item) {
 
     let formattedDescription = (item.description || "").replace(/\n/g, '<br>');
     formattedDescription = formattedDescription.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    // Custom Link Parser: [LINK:url / DISPLAY:text]
+    formattedDescription = formattedDescription.replace(
+        /\[\s*LINK\s*:\s*([\s\S]*?)\s*\/\s*DISPLAY\s*:\s*([\s\S]*?)\s*\]/gi, 
+        (match, url, display) => `<a href="${url.trim()}" target="_blank" rel="noopener noreferrer" style="color: #0284c7; text-decoration: underline;">${display.trim()}</a>`
+    );
 
     const logoHTML = item.logo && item.logo.trim() !== '' 
         ? `<img src="${item.logo}" alt="Logo" class="item-logo" onerror="this.style.display='none'">` 
